@@ -1,8 +1,8 @@
 const products = [
   {
     name: 'Semantic Aligner',
-    tagline: 'Stop agents talking past each other.',
-    description: 'Normalizes intents and fields across vendors and domains so multi-agent workflows don\'t fail on naming and schema mismatches.',
+    tagline: 'Translation Middleware',
+    description: 'Stop agents talking past each other. Normalizes intents and fields across vendors and domains so multi-agent workflows don\'t fail on naming and schema mismatches.',
     target: 'For teams connecting 3+ agent vendors in one workflow.',
     pain: 'Eliminates dropped handoffs and context loss.',
     metric: '95% reduction in cross-domain communication errors.',
@@ -12,9 +12,20 @@ const products = [
     recommended: true,
   },
   {
+    name: 'Trust Verifier',
+    tagline: 'Identity & Credential Verification',
+    description: 'Verify which agent is acting on behalf of whom before high-risk actions. Uses Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs) to enforce a zero-trust posture for autonomous agents.',
+    target: 'For financial services and high-risk automated workflows.',
+    pain: 'Prevents unknown agent identity and unauthorized actions.',
+    metric: '100% verified agent interactions for compliance.',
+    icon: '🛡️',
+    color: 'from-emerald-500 to-teal-600',
+    url: 'https://agent-trust-verifier-production.up.railway.app',
+  },
+  {
     name: 'Deadline Enforcer',
-    tagline: 'SLA watchdog for agents.',
-    description: 'Monitors every task with heartbeats and escalation so you catch silent failures instead of learning from angry users.',
+    tagline: 'SLA Monitoring & Enforcement',
+    description: 'SLA watchdog for agents. Tracks task deadlines with heartbeats and escalation so you catch silent failures instead of learning from angry users.',
     target: 'For enterprise operations reliability teams (SREs).',
     pain: 'Stops silent SLA breaches and stalled workflows.',
     metric: '99.9% of tasks acknowledged within SLA.',
@@ -24,37 +35,26 @@ const products = [
     recommended: true,
   },
   {
-    name: 'Trust Verifier',
-    tagline: 'Identity & Credential Verification',
-    description: 'Verify agent identity and permissions before high-risk actions. Validates agent identities using Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs).',
-    target: 'For financial services and high-risk automated workflows.',
-    pain: 'Prevents unknown agent identity and unauthorized actions.',
-    metric: '100% verified agent interactions for compliance.',
-    icon: '🛡️',
-    color: 'from-emerald-500 to-teal-600',
-    url: 'https://agent-trust-verifier-production.up.railway.app',
-  },
-  {
-    name: 'Fairness Auditor',
-    tagline: 'Referee for autonomous decisions.',
-    description: 'Audits agent negotiations and decisions for unfair outcomes and policy breaches with regulator-ready reports.',
-    target: 'For automated negotiation and procurement systems.',
-    pain: 'Mitigates regulatory risk and unfair outcomes.',
-    metric: 'Real-time auditing of 100% of negotiations.',
-    icon: '⚖️',
-    color: 'from-pink-500 to-rose-600',
-    url: 'https://agent-fairness-auditor-production.up.railway.app',
-  },
-  {
     name: 'Capability Broker',
     tagline: 'Service Discovery Engine',
-    description: 'Route each task to the right agent based on skills and track record. Decentralized registry where agents list capabilities and discover partners.',
+    description: 'Skills-aware routing for agents. A registry where agents publish capabilities and historical performance so each task is sent to the right agent, not just the first one found.',
     target: 'For agent platforms needing dynamic skills routing.',
     pain: 'Solves static hardcoded agent logic issues.',
     metric: 'Dynamic capabilities discovery in <200ms.',
     icon: '🔍',
     color: 'from-cyan-500 to-blue-600',
     url: 'https://agent-capability-broker-production.up.railway.app',
+  },
+  {
+    name: 'Fairness Auditor',
+    tagline: 'Bias & Compliance Detection',
+    description: 'Referee for autonomous decisions. Audits agent interactions and negotiations for unfair outcomes, bias, and policy violations, with regulator-ready reports for sensitive domains.',
+    target: 'For automated negotiation and procurement systems.',
+    pain: 'Mitigates regulatory risk and unfair outcomes.',
+    metric: 'Real-time auditing of 100% of negotiations.',
+    icon: '⚖️',
+    color: 'from-pink-500 to-rose-600',
+    url: 'https://agent-fairness-auditor-production.up.railway.app',
   },
 ];
 
@@ -67,48 +67,32 @@ export default function Home() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-cyan-500/10 to-transparent blur-3xl" />
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-24 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 border border-slate-700 rounded-full text-xs font-medium text-slate-300 mb-8 backdrop-blur-sm shadow-sm ring-1 ring-white/10">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            Infrastructure for Serious Agent Ecosystems
-          </div>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-tight text-white">
             AgentOps Suite
           </h1>
 
-          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-            Infrastructure for serious agent ecosystems. Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in real production workflows.
-            <br className="hidden md:block" />
-            <span className="text-slate-500 block mt-4 text-lg">
+          <div className="max-w-4xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-6">
+              Infrastructure for serious agent ecosystems.
+            </h2>
+            <p className="text-xl text-slate-300 leading-relaxed font-light mb-6">
+              Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in real production workflows.
+            </p>
+            <p className="text-lg text-slate-400">
               Built for agent-platform teams and enterprise AI platform owners running 3+ cooperating agents across tools.
-            </span>
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#products"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 w-full sm:w-auto"
-            >
-              See the Infrastructure
-            </a>
-            <a
-              href="mailto:contact@agentops-suite.com?subject=AgentOps Suite"
-              className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-200 font-semibold rounded-xl hover:bg-slate-700 transition-colors w-full sm:w-auto"
-            >
-              Discuss Your Agent Mesh
-            </a>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* The Complete Multi-Agent Toolkit */}
       <section id="products" className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Pain-Killer Products for Production Agents
+            The Complete Multi-Agent Toolkit
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Modular infrastructure components designed to solve specific failures in multi-agent orchestration.
+            Five independent, production-ready services that you can adopt individually or together to harden your agent mesh.
           </p>
         </div>
 
@@ -118,12 +102,6 @@ export default function Home() {
               key={product.name}
               className={`group relative bg-slate-900/50 border ${product.recommended ? 'border-cyan-500/50 ring-1 ring-cyan-500/20' : 'border-slate-800'} rounded-2xl p-8 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/50 flex flex-col h-full`}
             >
-              {product.recommended && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
-                  Production Essential
-                </div>
-              )}
-
               <div className="mb-6 flex items-start justify-between">
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center text-3xl shadow-lg ring-1 ring-white/10`}>
                   {product.icon}
@@ -145,65 +123,34 @@ export default function Home() {
               <p className="text-slate-300 text-sm leading-relaxed mb-6 flex-grow">
                 {product.description}
               </p>
-
-              <div className="space-y-4 border-t border-slate-800 pt-6 mt-auto">
-                <div>
-                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Target</p>
-                  <p className="text-sm text-slate-300">{product.target}</p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Pain Point</p>
-                  <p className="text-sm text-slate-300">{product.pain}</p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Success Metric</p>
-                  <p className="text-sm text-emerald-400 font-medium">{product.metric}</p>
-                </div>
-              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Work With Us Section */}
+      {/* Ready to Hard-Launch Your Agent Network? */}
       <section className="max-w-5xl mx-auto px-6 py-24">
         <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl relative">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 pointer-events-none" />
 
           <div className="p-10 md:p-16 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Agent Network?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Hard-Launch Your Agent Network?</h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
-              Each service is open-source and deployed on Railway. Use them directly or work with us to harden your production agent platform.
+              Each service is open-source and deployed on Railway. Use them as-is, or work with us to tailor them to your production agent platform.
             </p>
-
-            <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto mb-12">
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/30 transition-colors">
-                <div className="w-10 h-10 bg-cyan-500/20 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-2">For Agent Platform Startups</h3>
-                <p className="text-slate-400 text-sm mb-4">You're building the orchestration layer. Let us handle the reliability pipes.</p>
-                <p className="text-slate-300 font-medium text-sm">We help you integrate Semantic Aligner + Deadline Enforcer into one critical flow in a week.</p>
-              </div>
-
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/30 transition-colors">
-                <div className="w-10 h-10 bg-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center text-xl mb-4">🏢</div>
-                <h3 className="text-xl font-bold text-white mb-2">For Enterprise AI Teams</h3>
-                <p className="text-slate-400 text-sm mb-4">You have multiple internal agents that need to collaborate safely.</p>
-                <p className="text-slate-300 font-medium text-sm">We instrument your first "agent mesh" for reliability, identity, and compliance.</p>
-              </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="mailto:contact@agentops-suite.com?subject=AgentOps Suite"
                 className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg shadow-white/10 w-full sm:w-auto"
               >
-                Contact
+                Contact us about your agent mesh
               </a>
               <a
                 href="https://github.com/yogami"
                 className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-200 font-bold rounded-xl hover:bg-slate-700 transition-colors w-full sm:w-auto"
               >
-                View on GitHub
+                View projects on GitHub
               </a>
             </div>
           </div>
