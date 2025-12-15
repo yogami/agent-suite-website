@@ -68,7 +68,7 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-24 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-tight text-white">
-            AgentOps Suite – DEBUG 123
+            AgentOps Suite
           </h1>
 
           <div className="max-w-4xl mx-auto mb-12">
