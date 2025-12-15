@@ -1,8 +1,8 @@
 const products = [
   {
     name: 'Semantic Aligner',
-    tagline: 'Translation Middleware',
-    description: 'Stop agents talking past each other. Normalize intents and fields across vendors so multi-agent workflows don\'t fail on naming and schema mismatches.',
+    tagline: 'Stop agents talking past each other.',
+    description: 'Normalizes intents and fields across vendors and domains so multi-agent workflows don\'t fail on naming and schema mismatches.',
     target: 'For teams connecting 3+ agent vendors in one workflow.',
     pain: 'Eliminates dropped handoffs and context loss.',
     metric: '95% reduction in cross-domain communication errors.',
@@ -13,8 +13,8 @@ const products = [
   },
   {
     name: 'Deadline Enforcer',
-    tagline: 'SLA Monitoring & Enforcement',
-    description: 'SLA watchdog for agents. Monitor every task with heartbeats and escalation so you catch silent failures instead of learning from angry users.',
+    tagline: 'SLA watchdog for agents.',
+    description: 'Monitors every task with heartbeats and escalation so you catch silent failures instead of learning from angry users.',
     target: 'For enterprise operations reliability teams (SREs).',
     pain: 'Stops silent SLA breaches and stalled workflows.',
     metric: '99.9% of tasks acknowledged within SLA.',
@@ -36,8 +36,8 @@ const products = [
   },
   {
     name: 'Fairness Auditor',
-    tagline: 'Bias & Compliance Detection',
-    description: 'Referee for autonomous decisions. Audit agent negotiations for unfair outcomes and policy breaches with regulator-ready reports.',
+    tagline: 'Referee for autonomous decisions.',
+    description: 'Audits agent negotiations and decisions for unfair outcomes and policy breaches with regulator-ready reports.',
     target: 'For automated negotiation and procurement systems.',
     pain: 'Mitigates regulatory risk and unfair outcomes.',
     metric: 'Real-time auditing of 100% of negotiations.',
@@ -73,14 +73,11 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-tight">
-            Infrastructure for{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Serious Agent Ecosystems
-            </span>
+            AgentOps Suite
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-            Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in real production workflows.
+            Infrastructure for serious agent ecosystems. Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in real production workflows.
             <br className="hidden md:block" />
             <span className="text-slate-500 block mt-4 text-lg">
               Built for agent-platform teams and enterprise AI platform owners running 3+ cooperating agents across tools.
@@ -95,7 +92,7 @@ export default function Home() {
               See the Infrastructure
             </a>
             <a
-              href="mailto:contact@agentops-suite.com?subject=AGENT MESH"
+              href="mailto:contact@agentops-suite.com?subject=AgentOps Suite"
               className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-200 font-semibold rounded-xl hover:bg-slate-700 transition-colors w-full sm:w-auto"
             >
               Discuss Your Agent Mesh
@@ -174,9 +171,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 pointer-events-none" />
 
           <div className="p-10 md:p-16 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Build Your Agent Platform With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Agent Network?</h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
-              AgentOps Suite is open-source and ready for production, but the hard part is integrating it into your real workflows. We help you skip the infrastructure build-out.
+              Each service is open-source and deployed on Railway. Use them directly or work with us to harden your production agent platform.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto mb-12">
@@ -197,22 +194,18 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:gopal@agentops-suite.com?subject=AGENT MESH"
+                href="mailto:contact@agentops-suite.com?subject=AgentOps Suite"
                 className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg shadow-white/10 w-full sm:w-auto"
               >
-                Book a 30-minute call
+                Contact
               </a>
               <a
                 href="https://github.com/yogami"
                 className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-200 font-bold rounded-xl hover:bg-slate-700 transition-colors w-full sm:w-auto"
               >
-                Start from GitHub
+                View on GitHub
               </a>
             </div>
-
-            <p className="mt-8 text-lg font-medium text-slate-300">
-              Want to harden your agent platform?
-            </p>
           </div>
         </div>
       </section>
