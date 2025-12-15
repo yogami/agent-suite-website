@@ -1,8 +1,9 @@
+```javascript
 const products = [
   {
     name: 'Semantic Aligner',
     tagline: 'Translation Middleware',
-    description: 'Stop agents talking past each other. Normalizes intents and fields across vendors and domains so multi-agent workflows don\'t fail on naming and schema mismatches.',
+    description: 'Stop agents talking past each other. Normalize intents and fields across vendors so multi-agent workflows don\'t fail on naming and schema mismatches.',
     target: 'For teams connecting 3+ agent vendors in one workflow.',
     pain: 'Eliminates dropped handoffs and context loss.',
     metric: '95% reduction in cross-domain communication errors.',
@@ -14,7 +15,7 @@ const products = [
   {
     name: 'Deadline Enforcer',
     tagline: 'SLA Monitoring & Enforcement',
-    description: 'SLA watchdog for agents. Monitors every agent task with heartbeats and escalation. Find silent failures, enforce SLAs, and give your SRE team real visibility into agent workflows.',
+    description: 'SLA watchdog for agents. Monitor every task with heartbeats and escalation so you catch silent failures instead of learning from angry users.',
     target: 'For enterprise operations reliability teams (SREs).',
     pain: 'Stops silent SLA breaches and stalled workflows.',
     metric: '99.9% of tasks acknowledged within SLA.',
@@ -37,7 +38,7 @@ const products = [
   {
     name: 'Fairness Auditor',
     tagline: 'Bias & Compliance Detection',
-    description: 'Referee for autonomous decisions. Audits agent negotiations and decisions for bias, unfair outcomes, and policy breaches, with regulator-ready reports.',
+    description: 'Referee for autonomous decisions. Audit agent negotiations for unfair outcomes and policy breaches with regulator-ready reports.',
     target: 'For automated negotiation and procurement systems.',
     pain: 'Mitigates regulatory risk and unfair outcomes.',
     metric: 'Real-time auditing of 100% of negotiations.',
@@ -80,10 +81,10 @@ export default function Home() {
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-            Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in production workflows.
+            Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in real production workflows.
             <br className="hidden md:block" />
             <span className="text-slate-500 block mt-4 text-lg">
-              Built for agent platform teams and enterprise "agent mesh" teams running 3+ cooperating agents.
+              Built for agent-platform teams and enterprise AI platform owners running 3+ cooperating agents across tools.
             </span>
           </p>
 
@@ -119,7 +120,7 @@ export default function Home() {
           {products.map((product) => (
             <div
               key={product.name}
-              className={`group relative bg-slate-900/50 border ${product.recommended ? 'border-cyan-500/50 ring-1 ring-cyan-500/20' : 'border-slate-800'} rounded-2xl p-8 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/50 flex flex-col h-full`}
+              className={`group relative bg - slate - 900 / 50 border ${ product.recommended ? 'border-cyan-500/50 ring-1 ring-cyan-500/20' : 'border-slate-800' } rounded - 2xl p - 8 hover: border - slate - 600 transition - all duration - 300 hover: -translate - y - 1 hover: shadow - 2xl hover: shadow - slate - 900 / 50 flex flex - col h - full`}
             >
               {product.recommended && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
@@ -128,7 +129,7 @@ export default function Home() {
               )}
 
               <div className="mb-6 flex items-start justify-between">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center text-3xl shadow-lg ring-1 ring-white/10`}>
+                <div className={`w - 14 h - 14 rounded - 2xl bg - gradient - to - br ${ product.color } flex items - center justify - center text - 3xl shadow - lg ring - 1 ring - white / 10`}>
                   {product.icon}
                 </div>
                 <a
@@ -195,14 +196,23 @@ export default function Home() {
               </div>
             </div>
 
-            <a
-              href="mailto:gopal@agentops-suite.com?subject=AGENT MESH"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg shadow-white/10"
-            >
-              Book a Design Partner Call
-            </a>
-            <p className="mt-4 text-xs text-slate-500">
-              Or email <span className="text-slate-400">gopal@agentops-suite.com</span> with "AGENT MESH" in the subject.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="mailto:gopal@agentops-suite.com?subject=AGENT MESH"
+                className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg shadow-white/10 w-full sm:w-auto"
+              >
+                Book a 30-minute call
+              </a>
+              <a
+                href="https://github.com/yogami"
+                className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-200 font-bold rounded-xl hover:bg-slate-700 transition-colors w-full sm:w-auto"
+              >
+                Start from GitHub
+              </a>
+            </div>
+
+            <p className="mt-8 text-lg font-medium text-slate-300">
+              Want to harden your agent platform?
             </p>
           </div>
         </div>
