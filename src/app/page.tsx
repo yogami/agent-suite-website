@@ -73,7 +73,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-tight">
-            AgentOps Suite – Dev Copy
+            AgentOps Suite
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
