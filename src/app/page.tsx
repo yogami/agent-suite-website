@@ -2,18 +2,31 @@ const products = [
   {
     name: 'Semantic Aligner',
     tagline: 'Translation Middleware',
-    description: 'Bridges vocabulary gaps between agents. Translates medical jargon, legal terms, and domain-specific language in real-time.',
+    description: 'Stop agents talking past each other. Normalizes intents and fields across vendors and domains so multi-agent workflows don\'t fail on naming and schema mismatches.',
     target: 'For teams connecting 3+ agent vendors in one workflow.',
     pain: 'Eliminates dropped handoffs and context loss.',
     metric: '95% reduction in cross-domain communication errors.',
     icon: '🔮',
     color: 'from-purple-500 to-violet-600',
     url: 'https://agent-semantic-aligner-production.up.railway.app',
+    recommended: true,
+  },
+  {
+    name: 'Deadline Enforcer',
+    tagline: 'SLA Monitoring & Enforcement',
+    description: 'SLA watchdog for agents. Monitors every agent task with heartbeats and escalation. Find silent failures, enforce SLAs, and give your SRE team real visibility into agent workflows.',
+    target: 'For enterprise operations reliability teams (SREs).',
+    pain: 'Stops silent SLA breaches and stalled workflows.',
+    metric: '99.9% of tasks acknowledged within SLA.',
+    icon: '⏱️',
+    color: 'from-orange-500 to-amber-600',
+    url: 'https://agent-deadline-enforcer-production.up.railway.app',
+    recommended: true,
   },
   {
     name: 'Trust Verifier',
     tagline: 'Identity & Credential Verification',
-    description: 'Validates agent identities using Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs). Zero-trust architecture.',
+    description: 'Verify agent identity and permissions before high-risk actions. Validates agent identities using Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs).',
     target: 'For financial services and high-risk automated workflows.',
     pain: 'Prevents unknown agent identity and unauthorized actions.',
     metric: '100% verified agent interactions for compliance.',
@@ -22,37 +35,26 @@ const products = [
     url: 'https://agent-trust-verifier-production.up.railway.app',
   },
   {
-    name: 'Deadline Enforcer',
-    tagline: 'SLA Monitoring & Enforcement',
-    description: 'Tracks task deadlines across agent workflows. Automatically flags SLA breaches and ensures accountability.',
-    target: 'For enterprise operations reliability teams (SREs).',
-    pain: 'Stops silent SLA breaches and stalled workflows.',
-    metric: '99.9% of tasks acknowledged within SLA.',
-    icon: '⏱️',
-    color: 'from-orange-500 to-amber-600',
-    url: 'https://agent-deadline-enforcer-production.up.railway.app',
-  },
-  {
-    name: 'Capability Broker',
-    tagline: 'Service Discovery Engine',
-    description: 'Decentralized registry where agents list capabilities and discover partners. Like LinkedIn for AI agents.',
-    target: 'For agent platforms needing dynamic skills routing.',
-    pain: 'Solves static hardcoded agent logic issues.',
-    metric: 'Dynamic capabilities discovery in <200ms.',
-    icon: '🔍',
-    color: 'from-cyan-500 to-blue-600',
-    url: 'https://agent-capability-broker-production.up.railway.app',
-  },
-  {
     name: 'Fairness Auditor',
     tagline: 'Bias & Compliance Detection',
-    description: 'Scans agent interactions for bias, toxicity, and policy violations. Essential for regulated industries.',
+    description: 'Referee for autonomous decisions. Audits agent negotiations and decisions for bias, unfair outcomes, and policy breaches, with regulator-ready reports.',
     target: 'For automated negotiation and procurement systems.',
     pain: 'Mitigates regulatory risk and unfair outcomes.',
     metric: 'Real-time auditing of 100% of negotiations.',
     icon: '⚖️',
     color: 'from-pink-500 to-rose-600',
     url: 'https://agent-fairness-auditor-production.up.railway.app',
+  },
+  {
+    name: 'Capability Broker',
+    tagline: 'Service Discovery Engine',
+    description: 'Route each task to the right agent based on skills and track record. Decentralized registry where agents list capabilities and discover partners.',
+    target: 'For agent platforms needing dynamic skills routing.',
+    pain: 'Solves static hardcoded agent logic issues.',
+    metric: 'Dynamic capabilities discovery in <200ms.',
+    icon: '🔍',
+    color: 'from-cyan-500 to-blue-600',
+    url: 'https://agent-capability-broker-production.up.railway.app',
   },
 ];
 
@@ -67,21 +69,21 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-24 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 border border-slate-700 rounded-full text-xs font-medium text-slate-300 mb-8 backdrop-blur-sm shadow-sm ring-1 ring-white/10">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            Infrastructure for the Agentic Web
+            Infrastructure for Serious Agent Ecosystems
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-tight">
             Infrastructure for{" "}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              AI Agent Ecosystems
+              Serious Agent Ecosystems
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-            Make your agents understand each other, show up on time, and play fair.
+            Make your AI agents understand each other, hit their deadlines, prove who they are, and stay compliant in production workflows.
             <br className="hidden md:block" />
             <span className="text-slate-500 block mt-4 text-lg">
-              Built for agent-platform founders and enterprise "agent mesh" teams.
+              Built for agent platform teams and enterprise "agent mesh" teams running 3+ cooperating agents.
             </span>
           </p>
 
@@ -90,13 +92,13 @@ export default function Home() {
               href="#products"
               className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 w-full sm:w-auto"
             >
-              Explore the Platform
+              See the Infrastructure
             </a>
             <a
-              href="mailto:contact@agentops-suite.com"
+              href="mailto:contact@agentops-suite.com?subject=AGENT MESH"
               className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-200 font-semibold rounded-xl hover:bg-slate-700 transition-colors w-full sm:w-auto"
             >
-              Discuss Enterprise Needs
+              Discuss Your Agent Mesh
             </a>
           </div>
         </div>
@@ -106,10 +108,10 @@ export default function Home() {
       <section id="products" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Five Targeted Solutions. One Cohesive Mesh.
+            Pain-Killer Products for Production Agents
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Modular infrastructure components designed to solve specific pain points in multi-agent orchestration.
+            Modular infrastructure components designed to solve specific failures in multi-agent orchestration.
           </p>
         </div>
 
@@ -117,8 +119,14 @@ export default function Home() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="group relative bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/50 flex flex-col h-full"
+              className={`group relative bg-slate-900/50 border ${product.recommended ? 'border-cyan-500/50 ring-1 ring-cyan-500/20' : 'border-slate-800'} rounded-2xl p-8 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/50 flex flex-col h-full`}
             >
+              {product.recommended && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
+                  Production Essential
+                </div>
+              )}
+
               <div className="mb-6 flex items-start justify-between">
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center text-3xl shadow-lg ring-1 ring-white/10`}>
                   {product.icon}
@@ -160,48 +168,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing & Contact Strip */}
+      {/* Work With Us Section */}
       <section className="max-w-5xl mx-auto px-6 py-24">
-        <div className="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
-          <div className="p-10 md:p-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">Simple, Transparent Pricing</h2>
+        <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 pointer-events-none" />
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12">
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-                <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
-                <div className="text-3xl font-extrabold text-white mb-4">$0 <span className="text-sm text-slate-400 font-normal">/ month</span></div>
-                <ul className="text-left text-slate-300 space-y-3 mb-8 text-sm">
-                  <li className="flex items-center gap-2">✓ Limited API calls per day</li>
-                  <li className="flex items-center gap-2">✓ Community support</li>
-                  <li className="flex items-center gap-2">✓ Access to all 5 modules</li>
-                </ul>
-                <a href="#" className="block w-full py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors font-medium">Get Started</a>
+          <div className="p-10 md:p-16 text-center relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Build Your Agent Platform With Us</h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
+              AgentOps Suite is open-source and ready for production, but the hard part is integrating it into your real workflows. We help you skip the infrastructure build-out.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto mb-12">
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/30 transition-colors">
+                <div className="w-10 h-10 bg-cyan-500/20 text-cyan-400 rounded-lg flex items-center justify-center text-xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold text-white mb-2">For Agent Platform Startups</h3>
+                <p className="text-slate-400 text-sm mb-4">You're building the orchestration layer. Let us handle the reliability pipes.</p>
+                <p className="text-slate-300 font-medium text-sm">We help you integrate Semantic Aligner + Deadline Enforcer into one critical flow in a week.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/30 relative">
-                <div className="absolute top-0 right-0 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                <h3 className="text-xl font-bold text-white mb-2">Pro</h3>
-                <div className="text-3xl font-extrabold text-white mb-4">Usage <span className="text-sm text-slate-400 font-normal">/ based</span></div>
-                <ul className="text-left text-slate-300 space-y-3 mb-8 text-sm">
-                  <li className="flex items-center gap-2">✓ High throughput API</li>
-                  <li className="flex items-center gap-2">✓ Priority SLA support</li>
-                  <li className="flex items-center gap-2">✓ Custom integrations</li>
-                </ul>
-                <a href="mailto:sales@agentops-suite.com" className="block w-full py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-500 transition-colors font-medium">Contact Sales</a>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/30 transition-colors">
+                <div className="w-10 h-10 bg-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center text-xl mb-4">🏢</div>
+                <h3 className="text-xl font-bold text-white mb-2">For Enterprise AI Teams</h3>
+                <p className="text-slate-400 text-sm mb-4">You have multiple internal agents that need to collaborate safely.</p>
+                <p className="text-slate-300 font-medium text-sm">We instrument your first "agent mesh" for reliability, identity, and compliance.</p>
               </div>
             </div>
 
-            <div className="bg-slate-800/30 rounded-xl p-8 inline-block w-full max-w-2xl border border-slate-700">
-              <p className="text-slate-300 mb-6 text-lg">
-                Building an internal agent platform? We offer on-premise deployment and white-glove integration support.
-              </p>
-              <a
-                href="mailto:partnerships@agentops-suite.com"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg shadow-white/10"
-              >
-                Talk to us about your agent platform
-              </a>
-            </div>
+            <a
+              href="mailto:gopal@agentops-suite.com?subject=AGENT MESH"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-lg shadow-white/10"
+            >
+              Book a Design Partner Call
+            </a>
+            <p className="mt-4 text-xs text-slate-500">
+              Or email <span className="text-slate-400">gopal@agentops-suite.com</span> with "AGENT MESH" in the subject.
+            </p>
           </div>
         </div>
       </section>
@@ -211,11 +213,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h4 className="text-white font-bold text-lg mb-2">AgentOps Suite</h4>
-            <p className="text-slate-500 text-sm">© 2025 AgentOps Suite. All rights reserved.</p>
+            <p className="text-slate-500 text-sm">© 2025 AgentOps Suite. Built for the Multi-Agent AI Revolution.</p>
           </div>
           <div className="flex gap-6 text-slate-400">
             <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://github.com/yogami" className="hover:text-white transition-colors">GitHub</a>
             <a href="#" className="hover:text-white transition-colors">Documentation</a>
           </div>
         </div>
