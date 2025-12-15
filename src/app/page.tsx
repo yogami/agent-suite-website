@@ -1,4 +1,3 @@
-```javascript
 const products = [
   {
     name: 'Semantic Aligner',
@@ -120,7 +119,7 @@ export default function Home() {
           {products.map((product) => (
             <div
               key={product.name}
-              className={`group relative bg - slate - 900 / 50 border ${ product.recommended ? 'border-cyan-500/50 ring-1 ring-cyan-500/20' : 'border-slate-800' } rounded - 2xl p - 8 hover: border - slate - 600 transition - all duration - 300 hover: -translate - y - 1 hover: shadow - 2xl hover: shadow - slate - 900 / 50 flex flex - col h - full`}
+              className={`group relative bg-slate-900/50 border ${product.recommended ? 'border-cyan-500/50 ring-1 ring-cyan-500/20' : 'border-slate-800'} rounded-2xl p-8 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/50 flex flex-col h-full`}
             >
               {product.recommended && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
@@ -129,7 +128,7 @@ export default function Home() {
               )}
 
               <div className="mb-6 flex items-start justify-between">
-                <div className={`w - 14 h - 14 rounded - 2xl bg - gradient - to - br ${ product.color } flex items - center justify - center text - 3xl shadow - lg ring - 1 ring - white / 10`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center text-3xl shadow-lg ring-1 ring-white/10`}>
                   {product.icon}
                 </div>
                 <a
